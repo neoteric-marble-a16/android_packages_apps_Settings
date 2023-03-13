@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2024 Paranoid Android
+     SPDX-FileCopyrightText: 2025 Neoteric OS
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
@@ -8,4 +8,11 @@
     <!-- Neoteric OS version -->
     <string name="neoteric_version">Neoteric OS</string>
 
+    <!-- QS Panel -->
+    <string name="qs_show_brightness_title">Where to show</string>
+    <string name="qs_show_brightness_hide">Hide</string>
+    <string name="qs_show_brightness_normal">Show in QS Panel</string>
+    <string name="qs_show_brightness_both">Show in QS &amp; Quick QS Panel</string>
+    <string name="qs_brightness_position_position_title">Move to bottom</string>
+    <string name="qs_brightness_position_position_summary">Show brightness slider in the bottom of QS panel</string>
 </resources>
