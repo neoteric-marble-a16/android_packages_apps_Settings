@@ -563,4 +563,8 @@
     <string name="ui_night_mode_dim_wall_summary">Dim the wallpaper when using dark theme</string>
     <string name="ui_night_mode_dim_wall_amount_title">Dim amount</string>
     <string name="ui_night_light_dim_wall_summary">Dim the wallpaper when using night light</string>
+    
+    <!-- Minimum auto brightness -->
+    <string name="user_min_auto_brightness_title">Minimum auto brightness level</string>
+    <string name="user_min_auto_brightness_summary">Limits the lowest brightness level for auto brightness</string>
 </resources>
