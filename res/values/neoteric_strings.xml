@@ -427,4 +427,9 @@
     <!-- Grant audio focus to any apps -->
     <string name="grant_all_audio_focus_title">Grant audio focus to any apps</string>
     <string name="grant_all_audio_focus_summary">Allow audio to be played even during call</string>
+    
+    <!-- IME button space -->
+    <string name="show_ime_space_title">Show IME button space</string>
+    <string name="show_ime_space_summary">Enable the input method quick switch feature to switch input methods or hide the on-screen keyboard from the feature bar at the bottom of the screen when typing</string>
+
 </resources>
