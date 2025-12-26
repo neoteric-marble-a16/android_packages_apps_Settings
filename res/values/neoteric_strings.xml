@@ -437,4 +437,9 @@
     <string name="revan_toggle_summary">Use ReVanced variants of YouTube and YT Music instead of stock apps</string>
     <string name="revan_restart_to_apply">Restart to apply changes</string>
 
+    <!-- Status Bar Brightness Control --> 
+    <string name="status_bar_gestures_category_title">Gestures</string>
+    <string name="status_bar_brightness_control_title">Brightness control</string>
+    <string name="status_bar_brightness_control_summary">Adjust brightness by swiping across the status bar</string>
+
 </resources>
