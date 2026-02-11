@@ -582,4 +582,6 @@ public class Settings extends SettingsActivity {
     public static class FlashNotificationsActivity extends SettingsActivity { /* empty */ }
     public static class HeadsUpSettingsActivity extends SettingsActivity {}
     public static class BatteryShareSettingsActivity extends SettingsActivity {}
+
+    public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 }
