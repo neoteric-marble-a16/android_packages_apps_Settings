@@ -52,11 +52,8 @@ public class AppDashboardFragment extends DashboardFragment {
     private static final String ADVANCED_CATEGORY_KEY = "advanced_category";
     private static final String ASPECT_RATIO_PREF_KEY = "aspect_ratio_apps";
     private static final String KEYBOX_DATA_KEY = "keybox_data_setting";
-    private static final String PIF_DATA_KEY = "pif_data_setting";
     private ActivityResultLauncher<Intent> mKeyboxFilePickerLauncher;
-    private ActivityResultLauncher<Intent> mPifFilePickerLauncher;
     private KeyboxDataPreference mKeyboxDataPreference;
-    private PifDataPreference mPifDataPreference;
     private AppsPreferenceController mAppsPreferenceController;
 
     private static final String APP_LOCK_PREF_KEY = "app_lock";
@@ -121,19 +118,6 @@ public class AppDashboardFragment extends DashboardFragment {
                 }
             }
         );
-
-        mPifFilePickerLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            result -> {
-                if (result.getResultCode() == Activity.RESULT_OK && result.getData() != null) {
-                    Uri uri = result.getData().getData();
-                    Preference pref = findPreference(PIF_DATA_KEY);
-                    if (pref instanceof PifDataPreference) {
-                        ((PifDataPreference) pref).handleFileSelected(uri);
-                    }
-                }
-            }
-        );
     }
 
     @Override
@@ -141,14 +125,8 @@ public class AppDashboardFragment extends DashboardFragment {
         super.onViewCreated(view, savedInstanceState);
 
         mKeyboxDataPreference = findPreference(KEYBOX_DATA_KEY);
-        mPifDataPreference = findPreference(PIF_DATA_KEY);
-
         if (mKeyboxDataPreference != null) {
             mKeyboxDataPreference.setFilePickerLauncher(mKeyboxFilePickerLauncher);
-        }
-
-        if (mPifDataPreference != null) {
-            mPifDataPreference.setFilePickerLauncher(mPifFilePickerLauncher);
         }
     }
 
