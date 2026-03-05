@@ -8,10 +8,6 @@
     <!-- Neoteric OS version -->
     <string name="neoteric_version">Neoteric OS</string>
 
-    <!-- Keybox Data -->
-    <string name="keybox_data_title">Select keybox XML to spoof</string>
-    <string name="keybox_data_summary">Select keybox XML used for key attestation spoofing for all apps system wide. Click the delete button in order to reset the keybox data values used by the system.</string>
-
     <!-- QS Panel -->
     <string name="qs_show_brightness_title">Where to show</string>
     <string name="qs_show_brightness_hide">Hide</string>
