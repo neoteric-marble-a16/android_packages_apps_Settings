@@ -30,10 +30,6 @@ import com.android.settings.widget.PreferenceCategoryController;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
-import android.os.SystemProperties;
-import android.widget.Toast;
-import androidx.preference.Preference;
-import androidx.preference.SwitchPreferenceCompat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -99,28 +95,6 @@ public class AppDashboardFragment extends DashboardFragment {
         getSettingsLifecycle().addObserver(hibernatedAppsPreferenceController);
     }
 
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        final Preference pref = findPreference("persist_revan_mod");
-        if (pref instanceof SwitchPreferenceCompat) {
-            final SwitchPreferenceCompat toggle = (SwitchPreferenceCompat) pref;
-            boolean currentValue = SystemProperties.getBoolean("persist.sys.revan.mod", true);
-            toggle.setChecked(currentValue);
-            toggle.setOnPreferenceChangeListener((p, newVal) -> {
-                boolean enabled = (Boolean) newVal;
-                SystemProperties.set("persist.sys.revan.mod", enabled ? "true" : "false");
-                Toast.makeText(
-                        getContext(),
-                        R.string.revan_restart_to_apply,
-                        Toast.LENGTH_SHORT
-                ).show();
-                return true;
-            });
-        }
-    }
 
 
     @VisibleForTesting
