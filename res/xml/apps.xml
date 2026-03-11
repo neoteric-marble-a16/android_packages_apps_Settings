@@ -81,6 +81,13 @@
         android:title="@string/app_lock_title"/>
 
     <Preference
+        android:key="user_selectable_app_spoofing"
+        android:title="@string/user_selectable_app_spoofing_title"
+        android:summary="@string/user_selectable_app_spoofing_summary"
+        android:order="-993"
+        android:fragment="com.android.settings.applications.UserSelectedAppSpoofSettings" />    
+
+    <Preference
         android:key="game_settings"
         android:title="@string/game_space_title"
         android:summary="@string/game_space_summary"
